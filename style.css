@@ -1,113 +1,131 @@
-*{
+```css
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-html,body{
+
+html,
+body {
     display: grid;
     height: 100%;
     width: 100%;
     place-items: center;
-    background: linear-gradient(315deg, #ddd6f3 50%,  #faaca8 100%);
-    
+    background: linear-gradient(315deg, #ddd6f3 50%, #faaca8 100%);
 }
-.wrapper .button{
-    display: inline-block;
+
+.wrapper .button {
+    display: flex;
+    align-items: center;
     height: 60px;
     width: 60px;
     overflow: hidden;
     float: left;
-    margin: 0px 5px;
+    margin: 0 5px;
     background: #fff;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.2);
-    transition: all .3s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
-.wrapper .button .icon{
-    display: inline-block;
+
+.wrapper .button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     height: 60px;
     width: 60px;
-    text-align: center;
     border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 60px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.wrapper .button:nth-child(1):hover .icon{
+
+/* Hover background colors */
+
+.wrapper .button:nth-child(1):hover .icon {
     background: #4267b2;
-    transition: all .3s ease-in-out;
 }
-.wrapper .button:nth-child(2):hover .icon{
-    background: 	#0f9dfc;
-    transition: all .3s ease-in-out;
+
+.wrapper .button:nth-child(2):hover .icon {
+    background: #0f9dfc;
 }
-.wrapper .button:nth-child(3):hover .icon{
+
+.wrapper .button:nth-child(3):hover .icon {
     background: #e1306c;
-    transition: all .3s ease-in-out;
 }
-.wrapper .button:nth-child(4):hover .icon{
+
+.wrapper .button:nth-child(4):hover .icon {
     background: #333;
-    transition: all .3s ease-in-out;
 }
-.wrapper .button:nth-child(5):hover .icon{
+
+.wrapper .button:nth-child(5):hover .icon {
     background: #ff0000;
-    transition: all .3s ease-in-out;
 }
-.wrapper .button .icon i{
-    font-size: 30px;
-    line-height: 60px;
-    transition: all .3s ease-in-out; 
+
+/* Social media icons */
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
 }
-.wrapper .button:hover .icon i{
+
+.wrapper .button:hover .icon i {
     color: #fff;
 }
-.wrapper .button span{
+
+/* Social media text */
+
+.wrapper .button span {
+    display: inline-block;
+    white-space: nowrap;
     font-size: 20px;
     font-weight: 500;
-    line-height: 60px;
+    line-height: 1;
     margin-left: 10px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.wrapper .button:hover{
+
+.wrapper .button:nth-child(1) span {
+    color: #4267b2;
+}
+
+.wrapper .button:nth-child(2) span {
+    color: #0f9dfc;
+}
+
+.wrapper .button:nth-child(3) span {
+    color: #e1306c;
+}
+
+.wrapper .button:nth-child(4) span {
+    color: #333;
+}
+
+.wrapper .button:nth-child(5) span {
+    color: #ff0000;
+}
+
+/* Expand on hover */
+
+.wrapper .button:hover {
     width: 200px;
 }
-.wrapper .button:nth-child(1) span{
-    color: #4267b2;
-    transition: all .3s ease-in-out;
-}
-.wrapper .button:nth-child(2) span{
-    color: #0f9dfc;
-    transition: all .3s ease-in-out;
-}
-.wrapper .button:nth-child(3) span{
-    color: #e1306c;
-    transition: all .3s ease-in-out;
-}
-.wrapper .button:nth-child(4) span{
-    color: #333;
-    transition: all .3s ease-in-out;
-}
-.wrapper .button:nth-child(5) span{
-    color: #ff0000;
-    transition: all .3s ease-in-out;
-}
-@media only screen and (max-width:480px){
 
-    .wrapper{
+/* Responsive design for mobile */
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-    
     }
-    .wrapper .button{
-        margin: 25px 0px;
+
+    .wrapper .button {
+        float: none;
+        margin: 12px 0;
     }
-    
 }
-
-
-
-
+```
